@@ -84,6 +84,44 @@ const stopHour = document.querySelector(".stopwatch__hours"),
       clocks()
       
       
-      
+      const moon = document.querySelector(".moon"),
+            sun = document.querySelector(".sun"),
+            panel = document.querySelector(".tabsPanel"),
+            my = document.querySelector(".my__info"),
+            title = document.querySelector(".title"),
+            span = document.querySelector(".tabsLink__span"),
+            tabsLink = document.querySelectorAll(".tabsLink"),
+            tabsLinks = document.querySelector(".tabsLinks"),
+            hours = document.querySelector(".hours"),
+            minutes = document.querySelector(".minutes"),
+            numberClock = document.querySelector(".numberClock"),
+            arrowClockNumberNum = document.querySelectorAll(".arrowClockNumber__num"),
+            arrowClockNumberArr = document.querySelectorAll(".arrowClockNumber__arr"),
+            arrowClockNumber = document.querySelectorAll(".arrowClockNumber"),
+            stopwatchHours = document.querySelector('.stopwatch__hours'),
+            stopwatchMinutes = document.querySelector('.stopwatch__minutes'),
+            stopwatchSeconds = document.querySelector('.stopwatch__seconds'),
+            stopwatchBtn = document.querySelector(".stopwatch__btn");
+
+
+            sun.addEventListener("click",()=>{
+                panel.style = 'background: #e5e5e5;'
+                my.style = 'background: #e5e5e5;'
+                tabsLink.forEach(item => {
+                    item.style = 'color: black; font-weight: 700;'
+                })
+                tabsLinks.style = 'background: #e5e5e5;'
+                title.style = 'color: black;'
+                hours.style = 'background: #000;'
+                minutes.style = 'background: #000;'
+                arrowClockNumberNum.forEach(arrow =>{
+                    arrow.style = 'color:black;'
+                })
+                arrowClockNumber.style = 'background: #e5e5e5;'
+                stopwatchBtn.style = 'color:white; background: black;'
+                sun.style = 'display:none;'
+                moon.style = 'display:block; color: black; font-size:20px; opacity:1; margin-top:10px;'
+               
+            })
       
 
